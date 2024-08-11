@@ -15,4 +15,4 @@ def cloud(text, chat):
                       colormap='Pastel1', 
                       collocations=False, 
                       stopwords = STOPWORDS_RU).generate(text)
-    wordcloud.to_file(f'{chat}.png')
+    wordcloud.to_file(f'clouds/{chat}.png')

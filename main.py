@@ -6,10 +6,10 @@ from src.utils.make_cloud import cloud
 from src.utils.loader import client
 
 if __name__ == '__main__':
-    chat = 'clouds' + input('Введите юз диалога для создания облака слов: ')
+    chat = input('Введите юз диалога для создания облака слов: ')
     run(dump_messages(client, chat))
-    with open(chat + '.txt', 'r', encoding='UTF-8') as f:
+    with open('clouds/' + chat + '.txt', 'r', encoding='UTF-8') as f:
         text = f.readlines()
         text = ' '.join(text)
         cloud(text, chat)
-    remove(chat + '.txt')
+    remove('clouds/' + chat + '.txt')
